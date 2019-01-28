@@ -1,7 +1,7 @@
 =====================================================================
  Tokenauth
 =====================================================================
-Tokenauth developed for django rest token authentication. It enables you to define expiration time and token prefix. Tokens generate with random data and it use SHA-256 algorithm.
+Tokenauth developed for django rest token authentication. It enables you to define expiration time, token prefix and token refresh. Tokens generate with random data and it use SHA-256 algorithm.
 
 Installation
 ============
@@ -69,5 +69,5 @@ Refresh token:
 
 Deleted token and logout:
 ::
-  curl -X DELETE -H "Content-Type: application/json" -H "Authorization: <your-token>" <your-django-url>/<your-login-url>/tokens/
+  curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer<TOKEN_PREFIX> <your-token>" <your-django-url>/<your-login-url>/tokens/
 
